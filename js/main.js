@@ -30,11 +30,152 @@
         }
     });
 
+    // Small tags with pipe delimiters to chip elements
+    $(document).ready(function () {
+        $("small").each(function () {
+            const text = $(this).text();
+            if (text.includes("|")) {
+                const items = text
+                    .split("|")
+                    .map((item) => item.trim())
+                    .filter(Boolean);
+                $(this).empty();
+
+                items.forEach((item) => {
+                    $("<span>").addClass("chip").text(item).appendTo($(this));
+                });
+            }
+        });
+    });
+
+    // Portfolio image loading handler
+    $(document).ready(function () {
+        // Set minimum height for portfolio container to prevent layout shift
+        $(".portfolio-container").css("min-height", "400px");
+
+        // Process each portfolio item image
+        $(".portfolio-item img").each(function () {
+            const $img = $(this);
+
+            // Set initial opacity to 0
+            $img.css("opacity", "0");
+
+            // Create and insert loading spinner
+            const $parent = $img.parent();
+            if ($parent.css("position") !== "relative") {
+                $parent.css("position", "relative");
+            }
+
+            const $spinner = $('<div class="portfolio-loading-spinner"></div>');
+            $parent.append($spinner);
+
+            // Handle image loading
+            if ($img[0].complete) {
+                // Image already loaded from cache
+                $img.css("opacity", "1");
+                $spinner.remove();
+            } else {
+                // Image still loading
+                $img.on("load", function () {
+                    $(this).animate({ opacity: 1 }, 300);
+                    $spinner.fadeOut(300, function () {
+                        $(this).remove();
+                    });
+                });
+
+                // Handle loading errors
+                $img.on("error", function () {
+                    $(this).animate({ opacity: 0.5 }, 300);
+                    $spinner
+                        .html('<i class="fa fa-exclamation-triangle"></i>')
+                        .removeClass("portfolio-loading-spinner")
+                        .addClass("portfolio-error-indicator");
+                });
+            }
+        });
+    });
+
+    // Ensure Isotope layout updates after images load
+    $(window).on("load", function () {
+        // After all images have loaded, update Isotope layout
+        $(".portfolio-container").isotope("layout");
+    });
+
+    $(document).ready(function () {
+        // Reset button handler
+        $("#resetMessageButton").on("click", function () {
+            $("#message").val("").focus();
+            $(this).hide();
+        });
+
+        // Show/hide reset button based on textarea content
+        $("#message").on("input", function () {
+            if ($(this).val().trim() !== "") {
+                $("#resetMessageButton").show();
+            } else {
+                $("#resetMessageButton").hide();
+            }
+        });
+
+        // Form submission with validation
+        $("#contactForm").on("submit", function (e) {
+            e.preventDefault();
+
+            // Clear previous validation
+            $(".invalid-feedback").remove();
+            $(".is-invalid").removeClass("is-invalid");
+
+            let isValid = true;
+            const subject = $("#subject").val().trim();
+            const message = $("#message").val().trim();
+
+            // Subject validation
+            if (subject === "") {
+                isValid = false;
+                $("#subject").addClass("is-invalid");
+                $("#subject").after(
+                    '<div class="invalid-feedback">Please enter a subject.</div>'
+                );
+            }
+
+            // Message validation
+            if (message === "") {
+                isValid = false;
+                $("#message").addClass("is-invalid");
+                $("#message").after(
+                    '<div class="invalid-feedback">Please enter a message.</div>'
+                );
+            }
+
+            // If valid, send email
+            if (isValid) {
+                const email = "vsaravind01@gmail.com";
+                const encodedSubject = encodeURIComponent(subject);
+                const encodedMessage = encodeURIComponent(message);
+
+                // Create mailto link with subject and body
+                const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedMessage}`;
+
+                // Open user's email client in a new tab
+                window.open(mailtoLink, "_blank");
+            }
+        });
+    });
+
     // Typed Initiate
     if ($(".typed-text-output").length == 1) {
         var typed_strings = $(".typed-text").text();
+        var strings = typed_strings.split(",");
+        // remove new line characters from each string
+        strings = strings.map((str) =>
+            str
+                .replace("\n", " ")
+                .replace("                        ", "")
+                .replace("    ", "")
+        );
+        console.log(strings);
         var typed = new Typed(".typed-text-output", {
-            strings: typed_strings.split(","),
+            strings: strings,
             typeSpeed: 100,
             backSpeed: 20,
             smartBackspace: false,

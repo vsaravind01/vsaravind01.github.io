@@ -18,9 +18,10 @@
         <link href="img/SA favicon.jpeg" rel="icon" />
 
         <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
             rel="stylesheet"
         />
 
@@ -46,7 +47,10 @@
         <nav
             class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
         >
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a
+                href="index.html"
+                class="navbar-brand ml-lg-3 d-flex align-items-center"
+            >
                 <h1 class="m-0 display-5">
                     <span class="text-primary">S</span>A<a></a>
                 </h1>
@@ -70,12 +74,14 @@
                     <a href="#portfolio" class="nav-item nav-link">Gallery</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <a
-                    href="https://www.linkedin.com/in/sudharsan-aravind-v-18826a1aa/"
-                    class="btn btn-outline-primary d-none d-lg-block"
-                    target="_blank"
-                    >LinkedIn</a
-                >
+                <div class="d-flex align-items-center justify-content-center">
+                    <a
+                        href="https://www.linkedin.com/in/sudharsan-aravind-v-18826a1aa/"
+                        class="btn btn-outline-primary"
+                        target="_blank"
+                        >LinkedIn</a
+                    >
+                </div>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -108,8 +114,8 @@
                             class="typed-text-output d-inline font-weight-lighter text-white"
                         ></h1>
                         <div class="typed-text d-none">
-                            Backend Developer,Software Engineer,Machine Learning Engineer,
-                            Full-Stack Developer
+                            Backend Developer,Software Engineer,Machine Learning
+                            Engineer,Full-Stack Developer
                         </div>
                         <div
                             class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5"
@@ -421,7 +427,10 @@
                                 </p>
                                 <p>
                                     Winner and Team Lead of
-                                    <a href="https://www.sih.gov.in/sih2022s">
+                                    <a
+                                        href="https://www.sih.gov.in/sih2022s"
+                                        target="_blank"
+                                    >
                                         Smart India Hackathon 2022
                                     </a>
                                     held by AICTE. Our team built a semantic
@@ -1258,25 +1267,47 @@
                         Contact
                     </h1>
                     <h1 class="position-absolute text-uppercase text-primary">
-                        Contact Me
+                        Ping Me
                     </h1>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="contact-form text-center">
                             <div id="success"></div>
-                            <div>
-                                <a
-                                    href="mailto:vsaravind01@gmail.com"
-                                    class="btn btn-outline-primary"
-                                    type="submit"
-                                    target="_blank"
-                                    id="sendMessageButton"
-                                >
-                                    Send Message
-                                    <i class="fa-solid fa-envelope"></i>
-                                </a>
-                            </div>
+                            <form id="contactForm">
+                                <div class="form-row">
+                                    <div class="control-group col-12 mb-3">
+                                        <input
+                                            type="text"
+                                            class="form-control p-4"
+                                            id="subject"
+                                            placeholder="Subject"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="control-group col-12 mb-3">
+                                        <textarea
+                                            class="form-control py-3 px-4"
+                                            rows="5"
+                                            id="message"
+                                            placeholder="Message"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button
+                                        class="btn btn-outline-primary py-2 px-4"
+                                        type="submit"
+                                        id="sendMessageButton"
+                                    >
+                                        Send
+                                        <i
+                                            class="fa-solid fa-envelope ml-1"
+                                        ></i>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

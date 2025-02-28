@@ -65,11 +65,11 @@ section {
 
 body {
 	margin: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
-	line-height: 1.5;
-	color: #6c757d;
+	line-height: 1.6;
+	color: #444;
 	text-align: left;
 	background-color: #ffffff;
 }
@@ -90,8 +90,83 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Montserrat', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #333;
+  font-weight: bold;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.text-uppercase {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+strong {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500 !important;
+}
+
+small {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80% !important;
+  font-weight: 400 !important;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  margin-right: 0.4em;
+  margin-top: 0.5em;
+  background-color: #ebf2ed;
+  border: 1px solid #ebf2ed;
+  border-radius: 0.5em;
+  font-size: 85%;
+}
+
+.portfolio-loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid rgba(0, 123, 255, 0.2);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1;
+}
+
+.portfolio-error-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dc3545;
+    font-size: 40px;
+    z-index: 1;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.portfolio-item {
+    min-height: 200px;
+}
+
+.portfolio-container {
+    min-height: 400px;
+}
+
+.portfolio-item img {
+    transition: opacity 0.3s ease;
 }
 
 p {
@@ -395,7 +470,7 @@ h6,
 
 h1,
 .h1 {
-	font-size: 2.5rem;
+	font-size: 3.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -407,7 +482,7 @@ h1,
 
 h2,
 .h2 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -419,7 +494,7 @@ h2,
 
 h3,
 .h3 {
-	font-size: 1.75rem;
+	font-size: 1.8rem;
 }
 
 @media (max-width: 1200px) {
@@ -6761,7 +6836,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-	background-color: #0bceaf !important;
+	background-color: var(--primary) !important;
 }
 
 a.bg-primary:hover,
