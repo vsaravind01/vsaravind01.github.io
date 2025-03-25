@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import React, { useRef } from "react";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
@@ -56,9 +57,11 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, rating, icon, delay }) => {
         >
             <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-4 relative">
-                    <img
+                    <Image
                         src={icon}
                         alt={`${name} logo`}
+                        width={100}
+                        height={100}
                         className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110"
                     />
                 </div>
