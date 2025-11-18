@@ -130,6 +130,12 @@ export default function Achievements() {
 
   const achievements = [
     {
+      title: "3rd Place - Commvault Create 2025 Winter Edition",
+      organization: "Commvault",
+      date: "February, 2025",
+      description: "Top 3 Winner of Commvault Create Winter Edition ’25 among 150+ shortlisted finalists from across Commvault all over the country, for building Customer Pulse Radar, a scalable multi-agent AI framework to streamline customer support tasks"
+    },
+    {
       title: "Finalist - Bank of Baroda Generative AI Hackathon",
       organization: "Bank of Baroda & Microsoft Azure",
       date: "July, 2024 - September 2024",
