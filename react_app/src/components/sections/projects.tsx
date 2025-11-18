@@ -58,6 +58,15 @@ export default function Projects() {
       featured: true,
     },
     {
+      title: "Customer Pulse Radar",
+      technologies: [
+        "Python", "Kafka", "MongoDB", "Clickhouse", "Node.js", "OpenAI SDK", "Prompt Engineering",
+        "FastAPI", "React.js"
+      ],
+      description: "A Gen-AI powered system to boost the productivity and streamline day-to-day tasks of the Customer Support workforce.",
+      imageSrc: "/img/customer-pulse-radar.png"
+    },
+    {
       title: "MarkAnn",
       technologies: [
         "Python", "Generative AI", "Async-Programming", "WebSocket",
