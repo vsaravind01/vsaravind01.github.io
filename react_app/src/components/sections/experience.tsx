@@ -108,11 +108,11 @@ export default function Experience() {
         "One of the core developers of Prithvi, a next generation AI system that dramatically accelerates scientific discovery for human benefit.",
     },
     {
-      title: "Engineer Intern",
+      title: "Engineer",
       organization: "Commvault",
       organizationUrl: "https://www.commvault.com/",
       date: "December, 2024 - Current",
-      content: "Intern in Database team at Commvault, Bangalore.",
+      content: "contributing to Database team at Commvault - Bangalore.",
       isLast: true,
     },
   ];
