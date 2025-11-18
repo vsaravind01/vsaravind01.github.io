@@ -47,6 +47,7 @@ export default function Portfolio() {
     { id: "smart-wealth", label: "Smart Wealth" },
     { id: "picwiz", label: "PicWiz AI" },
     { id: "chequer", label: "Chequer" },
+    { id: "cpr", label: "Customer Pulse Radar" },
   ];
 
   // Project data
@@ -126,6 +127,42 @@ export default function Portfolio() {
       technologies: ["Python", "Yolov9", "Amazon Textract", "FastAPI", "PostgreSQL", "Async-Programming"],
       github: "https://github.com/vsaravind01/chequer",
     },
+    {
+      id: 9,
+      title: "Customer Pulse Radar",
+      description: "A Gen-AI powered system to boost the productivity of the customer support workforce.",
+      src: "/img/customer-pulse-radar.png",
+      alt: "Customer Pulse Radar",
+      category: ["cpr"],
+      technologies: ["Python", "Kafka", "MongoDB", "Clickhouse", "Node.js", "OpenAI SDK", "Prompt Engineering", "FastAPI", "React.js"],
+    },
+    {
+      id: 10,
+      title: "Customer Pulse Radar - Classification Agent",
+      description: "A classification agent to classify the severity of customer tickets.",
+      src: "/img/CPR-Classification-Agent.png",
+      alt: "Classification Agent Architecture",
+      category: ["cpr"],
+      technologies: ["Python", "Kafka", "MongoDB", "Clickhouse", "Node.js", "OpenAI SDK", "Prompt Engineering", "FastAPI", "React.js"],
+    },
+    {
+      id: 11,
+      title: "Customer Pulse Radar - Action Extraction Agent",
+      description: "An action extraction agent that extracts the pending tasks from customer support email threads and this agent is also smart enough the resolve the pending tasks based on the responses from the thread.",
+      src: "/img/CPR-Action-Extraction-Agent.png",
+      alt: "Action Extraction Agent Architecture",
+      category: ["cpr"],
+      technologies: ["Python", "Kafka", "MongoDB", "Clickhouse", "Node.js", "OpenAI SDK", "Prompt Engineering", "FastAPI", "React.js"],
+    },
+    {
+      id: 12,
+      title: "Customer Pulse Radar - Backend Architecture",
+      description: "The backend is engineered to allow massive scaling through asynchronous processing and parallel execution via Kafka topics consumed by agents working in parallel.",
+      src: "/img/Customer-Pulse-Radar-Backend-Architecture.png",
+      alt: "Customer Pulse Radar Backend Architecture",
+      category: ["cpr"],
+      technologies: ["Python", "Kafka", "MongoDB", "Clickhouse", "Node.js", "OpenAI SDK", "Prompt Engineering", "FastAPI", "React.js"],
+    }
   ];
 
   // Filter projects based on active category
