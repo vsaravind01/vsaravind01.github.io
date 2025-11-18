@@ -107,7 +107,7 @@ export default function Hero() {
             >
               <Button variant="gradient" size="lg" asChild>
                 <a 
-                  href="https://drive.google.com/file/d/1MR95Ms7kMeQNNAll7qo8p5GjFlLWbkJS/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1XgifweiG2rK908tNOppAefn2AtiAj7O_/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 font-medium bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-500 dark:to-blue-700 hover:from-blue-700 hover:to-blue-900 dark:hover:from-blue-600 dark:hover:to-blue-800"
