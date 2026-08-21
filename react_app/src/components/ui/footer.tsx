@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, Github, Instagram, Linkedin, Music, X } from "lucide-react";
+import { ArrowUp, Crown, Github, Linkedin, Music, X } from "lucide-react";
 import { Button } from "./button";
 
 const Footer = () => {
@@ -72,12 +72,12 @@ const Footer = () => {
               asChild
             >
               <a
-                href="https://www.instagram.com/sudharsan_aravind/"
+                href="https://www.chess.com/member/tyrian_the_dwarf"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
+                aria-label="My Chess.com profile"
               >
-                <Instagram className="h-5 w-5" />
+                <Crown className="h-5 w-5" />
               </a>
             </Button>
             <Button 
@@ -118,4 +118,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

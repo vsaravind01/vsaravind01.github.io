@@ -48,6 +48,7 @@ export default function Portfolio() {
     { id: "picwiz", label: "PicWiz AI" },
     { id: "chequer", label: "Chequer" },
     { id: "cpr", label: "Customer Pulse Radar" },
+    { id: "markann", label: "MarkAnn" },
   ];
 
   // Project data
@@ -162,6 +163,46 @@ export default function Portfolio() {
       alt: "Customer Pulse Radar Backend Architecture",
       category: ["cpr"],
       technologies: ["Python", "Kafka", "MongoDB", "Clickhouse", "Node.js", "OpenAI SDK", "Prompt Engineering", "FastAPI", "React.js"],
+    },
+    {
+      id: 13,
+      title: "MarkAnn Operations Dashboard",
+      description: "Live overview of the NSE announcement poller and processor health, queue depth, worker capacity, and operator controls.",
+      src: "/img/markann-dashboard.png",
+      alt: "MarkAnn operations dashboard",
+      category: ["markann"],
+      technologies: ["React", "FastAPI", "PostgreSQL", "Redis", "Docker Compose"],
+      github: "https://github.com/vsaravind01/MarkAnn-Bot",
+    },
+    {
+      id: 14,
+      title: "MarkAnn Poller Controls",
+      description: "Poller health and control view for monitoring NSE announcement ingestion and managing the worker lifecycle.",
+      src: "/img/markann-pollers.png",
+      alt: "MarkAnn poller controls",
+      category: ["markann"],
+      technologies: ["React", "FastAPI", "Redis"],
+      github: "https://github.com/vsaravind01/MarkAnn-Bot",
+    },
+    {
+      id: 15,
+      title: "MarkAnn Processor Controls",
+      description: "Processor view for inspecting queue activity and resizing the worker pool that analyses announcement PDFs.",
+      src: "/img/markann-processors.png",
+      alt: "MarkAnn processor controls",
+      category: ["markann"],
+      technologies: ["React", "FastAPI", "Redis", "Vision LLMs"],
+      github: "https://github.com/vsaravind01/MarkAnn-Bot",
+    },
+    {
+      id: 16,
+      title: "MarkAnn Event Log",
+      description: "Operational event stream showing poller and processor activity, alarms, and announcement-processing timings.",
+      src: "/img/markann-event-log.png",
+      alt: "MarkAnn event log",
+      category: ["markann"],
+      technologies: ["React", "FastAPI", "Redis", "PostgreSQL"],
+      github: "https://github.com/vsaravind01/MarkAnn-Bot",
     }
   ];
 

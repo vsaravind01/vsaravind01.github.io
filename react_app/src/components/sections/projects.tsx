@@ -69,11 +69,20 @@ export default function Projects() {
     {
       title: "MarkAnn",
       technologies: [
-        "Python", "Generative AI", "Async-Programming", "WebSocket",
-        "FastAPI", "Qdrant", "AWS", "GitHub Actions(CD)"
+        "Python", "FastAPI", "React", "PostgreSQL", "Redis",
+        "Vision LLMs", "Docker Compose"
       ],
-      description: "A Telegram bot that provides real-time press releases from the companies listed on Bombay Stock Exchange (BSE).",
+      description: "An AI-powered NSE market-alert platform that turns corporate-announcement PDFs into classified, summarised alerts, with an operator console for live engine health and controls.",
       github: "https://github.com/vsaravind01/MarkAnn-Bot",
+    },
+    {
+      title: "Akario",
+      technologies: [
+        "Go", "PostgreSQL", "Redis", "NATS JetStream", "Qdrant",
+        "Docker Compose", "OpenTelemetry", "A2A"
+      ],
+      description: "A self-hosted platform for building, deploying, and orchestrating multi-agent AI systems, with agent discovery, a credential vault, MCP integration, task delegation, and A2A communication.",
+      github: "https://github.com/super-cave/akario",
     },
     {
       title: "The Ayush Connect",
